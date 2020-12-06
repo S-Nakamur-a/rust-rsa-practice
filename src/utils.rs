@@ -12,6 +12,7 @@ pub fn lcm(a: u64, b: u64) -> u64 {
     (a / gcd(a, b)) * b
 }
 
+// https://scol.hatenablog.com/entry/2019/10/19/180000#%E6%8B%A1%E5%BC%B5%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E4%BA%92%E9%99%A4%E6%B3%95%E3%82%92%E5%BC%8F%E3%81%A7%E8%A1%A8%E7%8F%BE%E3%81%99%E3%82%8B
 pub fn ext_gcd(a: u64, b: u64) -> (u64, i64) {
     // find D, v s.t. a * D + b * v = 1
     // euclid
@@ -46,6 +47,7 @@ pub fn fast_pow_with_mod(a: u64, b: u64, n: u64) -> u64 {
     }) % n
 }
 
+// https://stackoverflow.com/questions/45918104/how-to-do-arithmetic-modulo-another-number-without-overflow#comment78806816_45923436
 fn mul_mod64(mut x: u64, mut y: u64, m: u64) -> u64 {
     let msb = 0x8000_0000_0000_0000;
     let mut d = 0;
